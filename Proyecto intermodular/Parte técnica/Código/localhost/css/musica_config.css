@@ -1,0 +1,71 @@
+:root { 
+    --verde: #2C7A7B; 
+    --fondo: #F7FAFC; 
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: var(--fondo); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+.caja { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    width: 90%; 
+    max-width: 500px; 
+    text-align: center; 
+}
+
+textarea { 
+    width: 100%; 
+    height: 100px; 
+    margin: 20px 0; 
+    padding: 10px; 
+    border-radius: 10px; 
+    border: 2px solid #ddd; 
+    font-family: monospace; 
+    box-sizing: border-box;
+}
+
+.boton { 
+    background: var(--verde); 
+    color: white; 
+    border: none; 
+    padding: 15px 30px; 
+    border-radius: 10px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    width: 100%; 
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background: #236C6D;
+}
+
+.instrucciones { 
+    text-align: left; 
+    font-size: 0.9rem; 
+    color: #666; 
+    background: #eee; 
+    padding: 15px; 
+    border-radius: 10px; 
+}
+
+.link-volver {
+    display: block; 
+    margin-top: 20px; 
+    color: #666; 
+    text-decoration: none;
+}
+
+.link-volver:hover {
+    text-decoration: underline;
+}

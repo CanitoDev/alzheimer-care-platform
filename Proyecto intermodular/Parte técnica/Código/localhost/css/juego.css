@@ -1,0 +1,113 @@
+:root {
+    --verde: #2C7A7B;
+    --fondo: #E6FFFA;
+    --blanco: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: sans-serif;
+    background: var(--fondo);
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 { 
+    color: var(--verde); 
+    font-size: 3rem; 
+    margin: 5px 0; 
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.contenedor-juego {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 1500px;
+    max-height: 100%;
+}
+
+.carta {
+    aspect-ratio: 1 / 1;
+    background: var(--blanco);
+    border: 6px solid var(--verde);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(2rem, 10vh, 10rem);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.carta.tapada {
+    background: var(--verde);
+    color: transparent;
+}
+
+.carta.tapada::after {
+    content: "?";
+    color: white;
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.carta.lograda {
+    background: #C6F6D5;
+    border-color: #38A169;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.controles {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    flex-shrink: 0;
+}
+
+.boton {
+    flex: 1;
+    padding: 15px;
+    font-size: 3rem;
+    font-weight: bold;
+    background: var(--blanco);
+    border: 4px solid var(--verde);
+    color: var(--verde);
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+#victoria {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border: 10px solid var(--verde);
+    border-radius: 30px;
+    text-align: center;
+    z-index: 20;
+    width: 90%;
+    max-width: 400px;
+}

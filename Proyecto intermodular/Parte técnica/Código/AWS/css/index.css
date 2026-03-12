@@ -1,0 +1,191 @@
+/* css/estilos.css */
+
+:root {
+    --color-principal: #2C7A7B;
+    --color-oscuro: #236C6D;
+    --color-cuidador: #4A5568;
+    --color-fondo-suave: #E6FFFA;
+    --texto-base: #2D3748;
+    --blanco: #FFFFFF;
+    --sombra: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    margin: 0; 
+    color: var(--texto-base); 
+    background: #f9f9f9; 
+}
+
+.centrar-todo { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+/* Botones */
+.boton { 
+    padding: 15px 30px; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    border: none; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.boton:hover { 
+    transform: translateY(-3px); 
+    filter: brightness(0.9); 
+}
+
+.boton-primario { background: var(--color-principal); color: var(--blanco); }
+.boton-cuidador { background: var(--color-cuidador); color: var(--blanco); }
+.boton-secundario { background: var(--blanco); color: var(--texto-base); border: 2px solid #ddd; }
+.boton-peligro { background: #E53E3E; color: var(--blanco); }
+
+.boton-gigante { 
+    padding: 25px 50px !important; 
+    font-size: 2rem !important; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Secciones Principales */
+.portada { 
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1920&auto=format&fit=crop') center/cover; 
+    height: 90vh; 
+}
+
+.contenedor-panel { 
+    display: none; 
+    min-height: 100vh; 
+    padding: 40px 20px; 
+    flex-direction: column; 
+}
+
+.rejilla-botones { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+    width: 100%; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+/* Tarjetas de Acción */
+.tarjeta-accion { 
+    background: var(--blanco); 
+    border: 3px solid var(--color-principal); 
+    border-radius: 20px; 
+    padding: 40px 20px; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: var(--sombra); 
+}
+
+.tarjeta-accion:hover { 
+    background: #f0fdf4; 
+    transform: scale(1.02); 
+}
+
+.ayuda-emergencia { 
+    grid-column: span 2; 
+    border-color: #E53E3E; 
+    color: #E53E3E; 
+    background: #FFF5F5; 
+}
+
+/* Características e Imágenes */
+.caracteristicas { 
+    padding: 80px 20px; 
+    background: white; 
+}
+
+.rejilla-imagenes { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.tarjeta-img img { 
+    width: 100%; 
+    height: 280px; 
+    object-fit: cover; 
+    border-radius: 20px; 
+    box-shadow: var(--sombra); 
+}
+
+.tarjeta-img h3 { 
+    margin-top: 20px; 
+    color: var(--color-principal); 
+    font-size: 1.5rem; 
+}
+
+/* Footer */
+footer { 
+    background: #1A202C; 
+    color: white; 
+    padding: 40px; 
+    text-align: center; 
+}
+
+/* Asistente y Chat */
+#contenedor-asistente { 
+    position: fixed; 
+    bottom: 25px; 
+    right: 25px; 
+    z-index: 10000; 
+}
+
+#boton-alternar-chat { 
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    background-color: var(--color-principal); 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+#ventana-chat-estelita { 
+    display: none; 
+    position: absolute; 
+    bottom: 85px; 
+    right: 0; 
+    width: 340px; 
+    height: 480px; 
+    background: white; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25); 
+    border: 1px solid #ddd; 
+    overflow: hidden; 
+}
+
+/* Dialogflow Messenger Customization */
+df-messenger {
+    --df-messenger-bot-message: #878fac;
+    --df-messenger-button-titlebar-color: #2C7A7B;
+    --df-messenger-chat-background-color: #fafafa;
+    --df-messenger-font-color: white;
+    --df-messenger-send-icon: #878fac;
+    --df-messenger-user-message: #479b3d;
+    z-index: 9999;
+}
+
+/* Responsivo */
+@media (max-width: 600px) { 
+    .ayuda-emergencia { grid-column: span 1; } 
+}

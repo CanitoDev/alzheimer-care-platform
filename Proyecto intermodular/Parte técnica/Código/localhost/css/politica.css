@@ -1,0 +1,53 @@
+/* Estilos para Páginas Legales */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background: #f9f9f9; 
+}
+
+h1 { 
+    color: #2C7A7B; 
+    border-bottom: 2px solid #2C7A7B; 
+    padding-bottom: 10px; 
+}
+
+h2 { 
+    color: #236C6D; 
+    margin-top: 30px; 
+}
+
+.caja-legal { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+
+.boton-volver { 
+    display: inline-block; 
+    margin-top: 30px; 
+    text-decoration: none; 
+    background: #2C7A7B; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background 0.3s ease;
+}
+
+.boton-volver:hover { 
+    background: #236C6D; 
+}
+
+/* Estilo para listas dentro de la política */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}

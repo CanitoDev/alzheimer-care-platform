@@ -1,0 +1,61 @@
+/* Configuración Global */
+:root { 
+    --verde: #2C7A7B; 
+    --blanco: #FFFFFF; 
+}
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    background: black; 
+    height: 100vh; 
+    overflow: hidden; 
+    font-family: sans-serif;
+    display: flex; 
+    flex-direction: column;
+}
+
+/* --- CONTENEDOR DE FOTOS --- */
+.visor {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto {
+    position: absolute;
+    max-width: 95%;
+    max-height: 90%;
+    border: 10px solid white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Transición suave de 2 segundos */
+}
+
+.foto.activa { 
+    opacity: 1; 
+}
+
+/* --- BOTÓN SALIR (GIGANTE) --- */
+.boton-salir {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    background: white; 
+    color: var(--verde);
+    padding: 20px 40px; 
+    border-radius: 50px;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    text-decoration: none; 
+    border: 4px solid var(--verde);
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.boton-salir:hover {
+    transform: scale(1.05);
+}
