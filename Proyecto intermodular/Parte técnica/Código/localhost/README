@@ -1,0 +1,54 @@
+## Ejecución en Entorno Local
+
+Para ejecutar el proyecto en un entorno local es necesario disponer de un servidor que permita ejecutar **PHP** y gestionar **bases de datos MySQL**.
+
+Una de las formas más sencillas de hacerlo es utilizando **XAMPP**.
+
+### Requisitos
+
+* PHP
+* MySQL / MariaDB
+* Servidor web (Apache o similar)
+
+### Opción recomendada: XAMPP
+
+Instalar **XAMPP**, que incluye todos los componentes necesarios para ejecutar el proyecto en local.
+
+Pasos:
+
+1. Instalar XAMPP.
+2. Iniciar los servicios **Apache** y **MySQL** desde el panel de control.
+3. Copiar la carpeta del proyecto dentro del directorio:
+
+```
+xampp/htdocs/
+```
+
+4. Acceder desde el navegador a:
+
+```
+http://localhost/alzheimer-care-platform
+```
+
+### Configuración de la Base de Datos
+
+1. Acceder a **phpMyAdmin**:
+
+```
+http://localhost/phpmyadmin
+```
+
+2. Crear una nueva base de datos.
+3. Importar el archivo `.sql` incluido en el proyecto.
+
+### Alternativas
+
+El proyecto también puede ejecutarse con cualquier entorno que soporte PHP, por ejemplo:
+
+* LAMP (Linux + Apache + MySQL + PHP)
+* WAMP
+* Servidores Apache con PHP configurado manualmente
+
+### Nota
+
+El proyecto fue desarrollado y probado en un entorno compatible con PHP y MySQL. Es necesario que ambos servicios estén activos para su correcto funcionamiento.
